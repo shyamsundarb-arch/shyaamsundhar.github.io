@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -32,7 +32,7 @@
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-            <a href="#hero-area" class="navbar-brand"><img src="./img/Picax.png"/></a>
+            <a href="#" class="navbar-brand"><img src="./img/Picax.png"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
               <i class="lnr lnr-menu"></i>
             </button>
@@ -101,7 +101,7 @@
 
 	<div class="row">
 		
-              <img class="img-fluid d-block mx-auto" src="img/logos/adp.png" alt="adp">
+              <img class="img-fluid d-block mx-auto" src="img/logos/keybank.png" alt="adp">
 
               <img class="img-fluid d-block mx-auto" src="img/logos/cbp.png" alt="cbp">
 
@@ -212,7 +212,7 @@
                 <i class="lnr lnr-briefcase"></i>
               </div>             
               <div class="fact-count">
-                <h3><span class="counter">60</span>%</h3>
+                <h3><span class="counter">32</span>%</h3>
                 <h4>Increase in Deal wins</h4>
               </div>
             </div>
@@ -224,7 +224,7 @@
                 
               </div>            
               <div class="fact-count">
-                <h3><span class="counter">52</span>%</h3>
+                <h3><span class="counter">46</span>%</h3>
                 <h4>Reduction in Sales cycle</h4>
               </div>
             </div>
@@ -235,7 +235,7 @@
                 <i class="lnr lnr-rocket"></i>
               </div>              
               <div class="fact-count">
-                <h3><span class="counter">46</span>%</h3>
+                <h3><span class="counter">2</span>X</h3>
                 <h4>Increase in ROI</h4>
               </div>
             </div>
@@ -514,7 +514,7 @@
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <input type="text" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+                        <input type="email" placeholder="Your Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
                         <div class="help-block with-errors"></div>
                       </div> 
                     </div>
@@ -548,7 +548,7 @@
             <ul class="footer-links">
               <li>
                 <div class="copyright">
-              <p>&copy; 2018 <a rel="nofollow" href="https://uideck.com">Picax .</a>All rights reserved.</p>
+              <p>&copy; 2018 <a rel="nofollow" href="#">Picax .</a>All rights reserved.</p>
             </div>
               </li>
               
@@ -556,7 +556,8 @@
           </div>
           <div class="col-lg-6 col-sm-6 col-xs-12">
             <div class="copyright">
-              <img class="img-fluid d-block mx-auto" src="img/logos/RGS_white.png" width="50px" height="50px" alt="adp">
+              <!-- <img class="img-fluid d-block mx-auto" src="img/logos/RGS_white.png" width="50px" height="50px" alt="adp">  
+		<a rel="nofollow" href="https://uideck.com">RGS</a> -->
             </div>
           </div>
         </div>
@@ -597,28 +598,17 @@
     <script src="js/form-validator.min.js"></script>
     <script src="js/contact-form-script.js"></script>   
     <script src="js/main.js"></script>
-<script>
-$("button").click(function(e) {
-    e.preventDefault();
-    var name ='';
-    var email  = '';
-    var msg = '';
-    
-    $.ajax({
-        type: "POST",
-        url: "https://rgssendmail.azurewebsites.net/api/SendMail?code=09fOFdbcgq9hKG0XqdCpkCsiSXTCjUXkM37uSAiVjPPI3LUkk3oozA==&email="+email+"&name="+name+"&msg="+msg""",
-        data: {
-            id: $(this).val(), // < note use of 'this' here
-            access_token: $("#access_token").val()
-        },
-        success: function(result) {
-            alert('success');
-        },
-        error: function(result) {
-            alert('error');
-        }
-    });
-});
-</script>
+<script type="text/javascript">
+	$("button").click(function() {
+
+	        var name = $('#name').val();
+	       var email = $('#email').val();
+	       var msg = $('#message').val();
+	      	var urlstring = "https://rgssendmail.azurewebsites.net/api/SendMail?code=09fOFdbcgq9hKG0XqdCpkCsiSXTCjUXkM37uSAiVjPPI3LUkk3oozA==&email="+email+"&name="+name+"&msg="+msg;
+	      	window.location.assign(urlstring);
+	   
+	});
+	
+	</script>
   </body>
 </html>
