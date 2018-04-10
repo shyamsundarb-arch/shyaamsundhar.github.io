@@ -548,7 +548,7 @@ mark {
 
 .img-fluid {
     max-width: 100%;
-    height: auto
+    height: 50px
 }
 
 .img-thumbnail {
@@ -7054,7 +7054,8 @@ a.bg-dark:hover {
 
 .mx-auto {
     margin-right: auto!important;
-    margin-left: auto!important
+    margin-left: auto!important;
+    margin-top: -12px;
 }
 
 .my-auto {
