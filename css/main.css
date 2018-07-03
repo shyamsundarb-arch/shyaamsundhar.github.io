@@ -380,8 +380,8 @@ button:focus {
 .back-to-top {
   display: none;
   position: fixed;
-  bottom: 18px;
-  right: 15px;
+  bottom: 42px;
+  right: 100px;
 }
 
 .back-to-top i {
